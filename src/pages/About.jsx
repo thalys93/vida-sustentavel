@@ -1,16 +1,20 @@
-import { Col, Container, Figure, Image, Row } from 'react-bootstrap'
+import { Col, Container, Figure, Row } from 'react-bootstrap'
+import NavegationComponent from '../components/NavegationComponent'
 
 function About() {
+  const primaryColor = "primaryColor"  
   return (
+    <>
+    <NavegationComponent customClass={primaryColor}/>
     <Container fluid>
       <Row>
         <Col sm>
           <section>
             <article>
-              <div>
-                <h1> Quem Somos </h1>
+              <div className='lightPopup Bebas'>
+                <h3> Quem Somos </h3>
               </div>
-              <div>
+              <div className='lightPopup BigShoulders'>
                 <p>
                   Bem-vindo ao <span>Vida Sustentável</span>, onde a paixão pelo planeta e o compromisso com um futuro mais <span>verde</span> se encontram. Nossa história é uma jornada de amor pela natureza, um desejo de mudança e o compromisso de inspirar outros a se juntarem a nós nesse movimento <span>vital.</span>
                   </p>
@@ -23,7 +27,7 @@ function About() {
           <section>
             <article>
               <div>
-                <h1>Nossa Missão</h1>
+                <h3>Nossa Missão</h3>
               </div>
               <div>
                 <p>
@@ -39,7 +43,7 @@ function About() {
           <section>
             <article>
               <div>
-                <h1> O Que Nos Move </h1>
+                <h3> O Que Nos Move </h3>
               </div>
               <div>
                 <ul>
@@ -74,6 +78,7 @@ function About() {
         </Col>         
       </Row>
     </Container>
+    </>
   )
 }
 
