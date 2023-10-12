@@ -19,24 +19,23 @@ const margin = "customMargin"
 
   return (       
     <>
-    {windowSize >= 579 ? (
-    <NavegationComponent customClass={primaryColor} margin={margin}/>
-    ) : (
+    {windowSize >= 579 ? (    
+      <NavegationComponent customClass={primaryColor} margin={margin}/>          
+    ) : (      
       <NavegationComponent/>
     )}
       <Container fluid>
         <Row>
           <Col sm={windowSize >= 576 ? true : false}>       
             {windowSize >= 579 ? (                         
-            HomeDesktop() 
+            HomeDesktop()
             ) : (
             HomeMobile()
             )}       
           </Col> 
           {windowSize >= 579 ? (         
-          <Col sm>
-            <div className="line"/>
-            <Image src="img/homeVetor.png" className="imageHome"/>
+          <Col sm>   
+            <Image src="img/homeVetor.png" className="imageHome img-fluid "  width={732}/>                  
           </Col>
           ) : null}
         </Row>
@@ -45,7 +44,7 @@ const margin = "customMargin"
   )
 
   function HomeDesktop() {
-    return <section className="customScale">
+    return <section className="m-3 ms-5 ">
       <article>
         <div className="flex flex-column pb-3">
           <h1 className="Bebas primaryColor"> Faça a <br /> diferença <span className="greenPrimary"> Hoje </span></h1>
