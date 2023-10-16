@@ -7,7 +7,7 @@
 
 body{
     background-color: #e7eee0;
-    background-image: url('img/lightBackground.png');
+    background-image: url('https://res.cloudinary.com/dh39ahmpj/image/upload/v1697482450/vida-sustentavel/lightBackground_mvm5f5.png');
     background-size: cover;        
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -15,7 +15,7 @@ body{
 
 .DarkBody{
     background-color: #232323;
-    background-image: url('img/nightBackground.png');
+    background-image: url('https://res.cloudinary.com/dh39ahmpj/image/upload/v1697482451/vida-sustentavel/nightBackground_rwhikl.png');
     background-size: cover;        
     box-sizing: border-box;
     scroll-behavior: smooth; 

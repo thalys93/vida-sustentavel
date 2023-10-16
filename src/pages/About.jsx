@@ -91,7 +91,7 @@ function About() {
                 <div>
                   <Figure>
                     <Figure.Image
-                      src={isDarkMode? 'img/aboutUsNight.png' : "img/aboutUsDay.png"}
+                      src={isDarkMode? 'https://res.cloudinary.com/dh39ahmpj/image/upload/v1697482454/vida-sustentavel/aboutUsNight_otzgpm.png' : "https://res.cloudinary.com/dh39ahmpj/image/upload/v1697482454/vida-sustentavel/aboutUsDay_npgwdb.png"}
                     />
                     <Figure.Caption className={isDarkMode? 'greenPrimary text-center BigShoulders' : 'primaryColor text-center BigShoulders greenSecondary'}>{isDarkMode? 'Bali, Indonesia' : 'El Cap, Yosemite National Park, United States'}</Figure.Caption>
                   </Figure>

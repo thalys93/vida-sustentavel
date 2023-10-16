@@ -58,7 +58,7 @@ function Home() {
             </Col>
             <Col md>
               <Container fluid>
-                <Image src={isDarkMode ? 'img/nightHomeVetor.png' : "img/homeVetor.png"} className="imageHome" width={windowSize >= 1025.233 ? null : windowSize >= 768 ? "57%" : "0%"} />
+                <Image src={isDarkMode ? 'https://res.cloudinary.com/dh39ahmpj/image/upload/v1697482454/vida-sustentavel/nightHomeVetor_uly6qe.png' : "https://res.cloudinary.com/dh39ahmpj/image/upload/v1697482456/vida-sustentavel/homeVetor_qywvum.png"} className="imageHome" width={windowSize >= 1025.233 ? null : windowSize >= 768 ? "57%" : "0%"} />
               </Container>
             </Col>
           </Row>
