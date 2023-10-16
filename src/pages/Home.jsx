@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Col, Container, Image, Row } from "react-bootstrap"
 import NavegationComponent from "../components/NavegationComponent";
+import { DarkModeContext } from "../utils/DarkModeContext";
 
 function Home() {
   const [windowSize, setWindowSize] = useState(window.innerWidth)
@@ -13,13 +14,15 @@ function Home() {
     };
   }, []);
 
-  const primaryColor = "whiteColor"  
+  const primaryColor = "whiteColor"
+
+  const { isDarkMode } = useContext(DarkModeContext)
 
 
   return (
     <>
       {windowSize >= 579 ? (
-        <NavegationComponent customClass={primaryColor}/>
+        <NavegationComponent customClass={primaryColor} />
       ) : (
         <NavegationComponent />
       )}
@@ -44,8 +47,8 @@ function Home() {
           <Row>
             <Col md>
               <div className="flex flex-column pb-3">
-                <h1 className="Bebas primaryColor spacingTitle"> Faça a <br /> diferença <span className="greenPrimary"> Hoje </span></h1>
-                <h5 className="BigShoulders tertiaryColor spacingSubtitle fw-bolder "> Juntos Podemos Construir <br />um futuro mais <span className="greenPrimary"> Verde </span></h5>
+                <h1 className={isDarkMode? 'Bebas whiteColor spacingTitle' : "Bebas primaryColor spacingTitle"}> Faça a <br /> diferença <span className="greenPrimary"> Hoje </span></h1>
+                <h5 className={isDarkMode? 'BigShoulders whiteTertiary spacingSubtitle fw-bolder' : "BigShoulders tertiaryColor spacingSubtitle fw-bolder"}> Juntos Podemos Construir <br />um futuro mais <span className="greenPrimary"> Verde </span></h5>
               </div>
               <div>
                 <a href="/about">
@@ -53,11 +56,11 @@ function Home() {
                 </a>
               </div>
             </Col>
-              <Col md>
-                <Container fluid>
-                  <Image src="img/homeVetor.png" className="imageHome" width={windowSize >= 1025.233 ? null : windowSize >= 768 ? "57%" : "0%"}/>
-                </Container>
-              </Col>            
+            <Col md>
+              <Container fluid>
+                <Image src={isDarkMode ? 'img/nightHomeVetor.png' : "img/homeVetor.png"} className="imageHome" width={windowSize >= 1025.233 ? null : windowSize >= 768 ? "57%" : "0%"} />
+              </Container>
+            </Col>
           </Row>
         </Container>
       </article>
@@ -68,8 +71,8 @@ function Home() {
     return <section>
       <article className="mobileText">
         <div className="flex flex-column pb-3">
-          <h1 className="Bebas primaryColor spacingTitle"> Faça a <br /> diferença <span className="greenPrimary"> Hoje </span></h1>
-          <h2 className="BigShoulders tertiaryColor spacingSubtitle"> Juntos Podemos Construir um <br /> futuro mais <span className="greenPrimary"> Verde </span></h2>
+          <h1 className={isDarkMode ? 'Bebas whiteColor spacingTitle' : "Bebas primaryColor spacingTitle"}> Faça a <br /> diferença <span className="greenPrimary"> Hoje </span></h1>
+          <h2 className={isDarkMode? 'BigShoulders whiteTertiary spacingSubtitle' : "BigShoulders tertiaryColor spacingSubtitle"}> Juntos Podemos Construir um <br /> futuro mais <span className="greenPrimary"> Verde </span></h2>
         </div>
         <div>
           <a href="/about">

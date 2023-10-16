@@ -21,9 +21,9 @@ const DarkModeProvider = ({children}) => {
 
     useEffect(() => {
         if 
-        (isDarkMode){document.body.classList.add("Darkbody");} 
+        (isDarkMode){document.body.classList.add("DarkBody");} 
         else 
-        {document.body.classList.remove("Darkbody");}
+        {document.body.classList.remove("DarkBody");}
         }, [isDarkMode])
 
     return (
