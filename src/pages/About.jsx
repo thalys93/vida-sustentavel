@@ -1,5 +1,6 @@
 import { Accordion, Col, Container, Figure, Row } from 'react-bootstrap'
 import NavegationComponent from '../components/NavegationComponent'
+import FooterComponent from '../components/FooterComponent'
 
 function About() {
   return (
@@ -95,6 +96,7 @@ function About() {
           </Col>
         </Row>
       </Container>
+      <FooterComponent/>
     </>
   )
 }

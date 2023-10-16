@@ -1,15 +1,27 @@
 import { Col, Container, Figure, Row, Stack } from "react-bootstrap"
 import { BsLinkedin, BsInstagram, BsGithub, BsGlobe } from "react-icons/bs"
 import NavegationComponent from "../components/NavegationComponent"
+import FooterComponent from "../components/FooterComponent"
+import { useEffect, useState } from "react"
 
 
 function Contact() {
+
+  const [windowSize, setWindowSize] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleRezise = () => setWindowSize(window.innerWidth)
+    window.addEventListener('resize', handleRezise);
+    return () => {
+      window.removeEventListener('resize', handleRezise);
+    };
+  }, []);
 
 
   return (
     <>
       <NavegationComponent />
-      <Container fluid className="spacingText">
+      <Container fluid className={windowSize >= 768 ? "spacingText ContactWidth" : "spacingText"}>
         <Row>
           <Col sm>
             <section>
@@ -43,6 +55,7 @@ function Contact() {
           </Col>
         </Row>
       </Container>
+      <FooterComponent/>
     </>
   )
 
