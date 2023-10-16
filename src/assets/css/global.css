@@ -21,6 +21,9 @@ body{
 
 .Bebas{font-family: 'Bebas Neue', cursive;}
 .BigShoulders{font-family: 'Big Shoulders Text', cursive;}
+.spacingTitle{letter-spacing: 7.665px;}
+.spacingSubtitle{letter-spacing: 1.411px;}
+.spacingText{letter-spacing: 0.608px;}
 
 .primaryColor{color: #444444;}
 .tertiaryColor{color: #636363;}
@@ -57,8 +60,46 @@ body{
 }
 
 .imageHome{    
-    height: 100%;    
+    height: 100%;
+    box-sizing: border-box;
     z-index: -1;
     position: absolute;
-    top: 0;    
+    top: 0;
+    right: 0;
+}
+
+.mobileText{
+    position: relative;  
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 3rem;    
+    width: 50%;    
+}
+
+.mobileText>div>h1{
+    font-size: 3.5rem;
+    font-weight: 200;
+    letter-spacing: 7.665px;    
+}
+
+.mobileText>div>h2{
+    font-size: 1.8rem;
+    font-weight: bold;    
+    font-weight: 400;
+    letter-spacing: 1.411px;
+}
+
+.mobileText>div>a>button{
+    width: 100%;
+}
+
+.iconSize{
+    width: 2.8125rem;
+    height: 2.625rem;
+}
+
+.figureHover:hover{
+    scale: 1.1;
 }
