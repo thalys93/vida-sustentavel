@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 90 20% 95%;
+    --foreground: 160 25% 6%;
+    --card: 0 0% 100%;
+    --card-foreground: 160 25% 6%;
+    --primary: 162 62% 11%;
+    --primary-foreground: 90 20% 95%;
+    --secondary: 90 18% 90%;
+    --secondary-foreground: 162 62% 11%;
+    --muted: 90 14% 90%;
+    --muted-foreground: 160 10% 35%;
+    --accent: 78 90% 61%;
+    --accent-foreground: 162 62% 11%;
+    --border: 90 12% 85%;
+    --input: 90 12% 85%;
+    --ring: 78 90% 45%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
